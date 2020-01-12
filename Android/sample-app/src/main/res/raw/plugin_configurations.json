@@ -22,7 +22,8 @@
       "unsupported_since_zapp_sdk": ""
     },
     "configuration_json": {
-      "allow_portrait": true
+      "allow_portrait": true,
+      "LICENSE_KEY": ""
     }
   },
   {

@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.view.View
 import com.applicaster.model.APURLPlayable
+import com.applicaster.plugin_manager.PluginManager
 import com.applicaster.plugin_manager.login.LoginManager
 import com.applicaster.plugin_manager.playersmanager.PlayerContract
 import com.applicaster.plugin_manager.playersmanager.internal.PlayableType
 import com.applicaster.plugin_manager.playersmanager.internal.PlayersManager
+import com.applicaster.util.AppData
 import com.applicaster.util.UrlSchemeUtil
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -60,7 +62,6 @@ class MainActivity : FragmentActivity(), View.OnClickListener {
         playable.setType(PlayableType.Default)
         // Player contract will get the instance of your plugin player and pass it the playable item
         playerContract = PlayersManager.getInstance().createPlayer(playable, this)
-
 
         when (view.id) {
             R.id.fullscreen_button -> launchFullscreen()

@@ -77,11 +77,6 @@
     },
     {
       "type": "text",
-      "key": "pin_validation_plugin_id",
-      "tooltip_text": "Plugin ID to validate item access"
-    },
-    {
-      "type": "text",
       "key": "livestream_url",
       "tooltip_text": "Live stream configuration URL"
     }
