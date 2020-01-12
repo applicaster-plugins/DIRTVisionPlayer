@@ -1,0 +1,2 @@
+include ':dirtvision-player-plugin'
+include ':sample-app'

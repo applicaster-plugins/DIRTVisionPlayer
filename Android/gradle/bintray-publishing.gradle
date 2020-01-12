@@ -1,0 +1,84 @@
+apply plugin: 'digital.wup.android-maven-publish'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'org.jetbrains.dokka-android'
+
+dokka {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/javadoc"
+    reportUndocumented = false
+}
+task androidJavadocsJar(type: Jar, dependsOn: dokka) {
+    archiveClassifier = 'javadoc'
+    from "$buildDir/javadoc"
+}
+task androidSourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+publishing {
+    publications {
+        android(MavenPublication) {
+            groupId GROUP
+            version VERSION
+            artifactId ARTIFACT_ID
+            from components.android
+            artifact androidJavadocsJar
+            artifact androidSourcesJar
+            pom {
+                name = ARTIFACT_ID
+                description = POM_DESCRIPTION
+                url = POM_URL
+                licenses {
+                    license {
+                        name = POM_LICENCE_NAME
+                        url = POM_LICENCE_URL
+                    }
+                }
+                developers {
+                    developer {
+                        id = POM_DEVELOPER_ID
+                        name = POM_DEVELOPER_NAME
+                        email = POM_DEVELOPER_EMAIL
+                    }
+                }
+                scm {
+                    connection = POM_SCM_CONNECTION
+                    developerConnection = POM_SCM_DEV_CONNECTION
+                    url = POM_SCM_URL
+                }
+            }
+        }
+    }
+}
+
+static def getBintrayUserProperty() {
+    return System.getenv("MAVEN_USERNAME")
+}
+
+static def getBintrayApiKeyProperty() {
+    return System.getenv("MAVEN_PASSWORD")
+}
+
+bintray {
+    user = bintrayUserProperty
+    key = bintrayApiKeyProperty
+    publications = ['android']
+    dryRun = false
+    publish = true
+    override = true
+    pkg {
+        repo = 'maven_plugins'
+        name = ARTIFACT_ID
+        userOrg = 'applicaster-ltd'
+        websiteUrl = POM_URL
+        issueTrackerUrl = ISSUE_URL
+        vcsUrl = POM_SCM_URL
+        licenses = ['Apache-2.0']
+        labels = ['aar', 'android']
+        version {
+            name = VERSION
+            vcsTag = 'v' + name
+        }
+    }
+}

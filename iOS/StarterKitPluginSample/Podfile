@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+source 'git@github.com:applicaster/CocoaPods.git'
+source 'git@github.com:applicaster/applicaster-iap-framework'
+source 'git@github.com:applicaster/applicaster-cam-framework'
+
+source 'https://cdn.cocoapods.org/'
+
+target 'StarterKitPluginSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for StarterKitPluginSample
+
+  pod 'CAMStarterKit', :path => '../ContentAccessPluginsStarterKit/CAMStarterKit.podspec'
+
+end
