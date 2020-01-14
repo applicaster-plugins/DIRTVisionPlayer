@@ -5,16 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.applicaster.jwplayerplugin.JWPlayerActivity;
-
-import java.util.Map;
+import com.applicaster.plugin_manager.playersmanager.Playable;
 
 public class DIRTVisionPlayerActivity extends JWPlayerActivity {
 
-    static final String PLAYABLE_KEY = "playable";
-    static final String LIVEURL_KEY = "live_url";
+    private static final String PLAYABLE_KEY = "playable";
 
-    public static void startPlayerActivity(Context context, Bundle bundle, Map<String, String> params) {
+    public static void startPlayerActivity(Context context, Playable playable) {
         Intent intent = new Intent(context, DIRTVisionPlayerActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(DIRTVisionPlayerActivity.PLAYABLE_KEY, playable);
         intent.putExtras(bundle);
         context.startActivity(intent);
     }

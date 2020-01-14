@@ -1,14 +1,7 @@
 package com.applicaster.plugin.player.dirtvision;
 
 import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.Uri;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.LocalBroadcastManager;
 
 import com.applicaster.atom.model.APAtomEntry;
 import com.applicaster.controller.PlayerLoader;
@@ -74,11 +67,7 @@ public class DIRTVisionPlayerAdapter extends JWPlayerAdapter implements VideoPla
         if (isInline) {
             super.displayVideo(isInline);
         } else {
-            Bundle bundle = new Bundle();
-            bundle.putSerializable(DIRTVisionPlayerActivity.PLAYABLE_KEY, getFirstPlayable());
-            bundle.putString(DIRTVisionPlayerActivity.LIVEURL_KEY, livestreamUrl);
-            //  can't be passed in bundle, due to its size
-            DIRTVisionPlayerActivity.startPlayerActivity(getContext(), bundle, getPluginConfigurationParams());
+            DIRTVisionPlayerActivity.startPlayerActivity(getContext(), getFirstPlayable());
         }
     }
 
