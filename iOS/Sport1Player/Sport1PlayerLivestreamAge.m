@@ -16,7 +16,6 @@ static NSInteger const kRetryTime = 5;
 
 @interface Sport1PlayerLivestreamPin ()
 @property (nonatomic, strong) NSDictionary *nextLivestream;
-@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSDate *livestreamEnd;
 @property (nonatomic, assign) BOOL ageRestricted;
 @property (nonatomic, strong, readonly) id<Sport1HTTPClient> httpClient;
@@ -73,20 +72,6 @@ static NSInteger const kRetryTime = 5;
         self.livestreamEnd = [self dateFromString:current[kLivestreamEnd]];
         
         [self updateAgeRestriction:current];
-        
-        if (self.timer != nil) {
-            [self.timer invalidate];
-            self.timer = nil;
-            
-            if (self.currentPlayerAdapter == nil || self.currentPlayerAdapter.currentPlayerState == ZPPlayerStateStopped) {
-                return;
-            }
-        }
-        __weak Sport1PlayerLivestreamPin *weakSelf = self;
-        self.timer = [[NSTimer alloc] initWithFireDate:weakSelf.livestreamEnd interval:0 repeats:NO block:^(NSTimer *timer) {
-             [weakSelf.currentPlayerAdapter presentPinIfNecessary];
-         }];
-        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
 }
 

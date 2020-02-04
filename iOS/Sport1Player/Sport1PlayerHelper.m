@@ -44,7 +44,7 @@ static NSString *const kAuthIdKey = @"auth_id";
         if (statusCode.integerValue == 401 || statusCode.integerValue == 403) {
             
             // trying to get token one more time if status code 401, 403
-            NSObject<ZPLoginProviderUserDataProtocol> *loginPlugin = [[ZPLoginManager sharedInstance] createWithUserData];
+            NSObject<ZPLoginProviderUserDataProtocol> *loginPlugin = [[ZAAppConnector sharedInstance].pluginsDelegate.loginPluginsManager createWithUserData];
             [loginPlugin logout:^(enum ZPLoginOperationStatus signOutStatus) {
                 if (signOutStatus != ZPLoginOperationStatusCompletedSuccessfully) {
                     NSLog(@"<ERROR>Sport1Player: Can't sign out, error type = %li", (long)signOutStatus);

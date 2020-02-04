@@ -16,8 +16,6 @@ static NSString *const kTrackingInfoKey = @"tracking_info";
 @interface Sport1PlayerAdapter : ZappJWPlayerAdapter
 @property (nonatomic, assign) Class<ZPPluginManagerProtocol> pluginManager;
 
-- (void)presentPinIfNecessary;
-
 @end
 
 NS_ASSUME_NONNULL_END
