@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 static NSString *const kTrackingInfoKey = @"tracking_info";
 
-@interface Sport1PlayerAdapter : ZappJWPlayerAdapter
+@interface DIRTVisionPlayerAdapter : ZappJWPlayerAdapter
 @property (nonatomic, assign) Class<ZPPluginManagerProtocol> pluginManager;
 
 @end

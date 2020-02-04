@@ -25,7 +25,7 @@ static NSInteger const kRetryTime = 5;
 
 #pragma mark - Publich methods
 
-- (instancetype)initWithConfigurationJSON:(NSDictionary *)configurationJSON currentPlayerAdapter:(Sport1PlayerAdapter *)currentPlayerAdapter httpClient:(id<Sport1HTTPClient>)httpClient {
+- (instancetype)initWithConfigurationJSON:(NSDictionary *)configurationJSON currentPlayerAdapter:(DIRTVisionPlayerAdapter *)currentPlayerAdapter httpClient:(id<Sport1HTTPClient>)httpClient {
     if (self = [super init]) {
         _currentPlayerAdapter = currentPlayerAdapter;
         _httpClient = httpClient;

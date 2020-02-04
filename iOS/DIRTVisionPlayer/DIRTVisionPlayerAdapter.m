@@ -9,7 +9,7 @@
 @import ZappLoginPluginsSDK;
 @import PluginPresenter;
 @import ZappPlugins;
-#import "Sport1PlayerAdapter.h"
+#import "DIRTVisionPlayerAdapter.h"
 #import <JWPlayer_iOS_SDK/JWPlayerController.h>
 #import "Sport1PlayerLivestreamAge.h"
 #import "JWPlayerViewController+Public.h"
@@ -19,13 +19,13 @@
 static NSString *const kPlayableItemsKey = @"playable_items";
 static NSString *const kPluginName = @"pin_validation_plugin_id";
 
-@interface Sport1PlayerAdapter ()
+@interface DIRTVisionPlayerAdapter ()
 @property (nonatomic, strong) Sport1PlayerLivestreamPin *livestreamPinValidation;
 @property (nonatomic, strong) ZPPlayerConfiguration *playerConfiguration;
 @property (nonatomic, strong) Sport1PlayerHelper *playerHelper;
 @end
 
-@implementation Sport1PlayerAdapter
+@implementation DIRTVisionPlayerAdapter
 
 + (id<ZPPlayerProtocol>)pluggablePlayerInitWithPlayableItems:(NSArray<id<ZPPlayable>> *)items configurationJSON:(NSDictionary *)configurationJSON {
     NSString *playerKey = configurationJSON[@"playerKey"];
@@ -36,7 +36,7 @@ static NSString *const kPluginName = @"pin_validation_plugin_id";
 
     [JWPlayerController setPlayerKey:playerKey];
 
-    Sport1PlayerAdapter *instance = [Sport1PlayerAdapter new];
+    DIRTVisionPlayerAdapter *instance = [DIRTVisionPlayerAdapter new];
     instance.configurationJSON = configurationJSON;
     instance.playerViewController = [Sport1PlayerViewController new];
     instance.playerViewController.configurationJSON = configurationJSON;

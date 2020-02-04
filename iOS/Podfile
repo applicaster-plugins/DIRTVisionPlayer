@@ -23,11 +23,11 @@ def shared_pods
     pod 'ZappGeneralPluginsSDK'
 end
 
-target 'Sport1Player' do
+target 'DIRTVisionPlayer' do
 	shared_pods
 end
 
- target 'Sport1PlayerTests' do
+ target 'DIRTVisionPlayerTests' do
     inherit! :search_paths
     shared_pods
 end

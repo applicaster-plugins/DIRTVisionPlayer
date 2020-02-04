@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Sport1PlayerAdapter.h"
+#import "DIRTVisionPlayerAdapter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,9 +18,9 @@ static NSString *const kFSK16 = @"FSK16";
 
 @interface Sport1PlayerLivestreamPin : NSObject
 
-@property (nonatomic, weak) Sport1PlayerAdapter *currentPlayerAdapter;
+@property (nonatomic, weak) DIRTVisionPlayerAdapter *currentPlayerAdapter;
 
--(instancetype)initWithConfigurationJSON:(NSDictionary*)configurationJSON currentPlayerAdapter:(Sport1PlayerAdapter* _Nullable)currentPlayerAdapter httpClient:(id<Sport1HTTPClient>)httpClient;
+-(instancetype)initWithConfigurationJSON:(NSDictionary*)configurationJSON currentPlayerAdapter:(DIRTVisionPlayerAdapter* _Nullable)currentPlayerAdapter httpClient:(id<Sport1HTTPClient>)httpClient;
 -(void)updateLivestreamAgeDataWithCompletion:(void (^)(BOOL success))completionHandler;
 -(BOOL)shouldDisplayPin;
 
