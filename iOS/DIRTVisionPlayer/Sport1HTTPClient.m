@@ -6,7 +6,7 @@
 //  Copyright © 2019 Applicaster Ltd. All rights reserved.
 //
 
-@import ZappLoginPluginsSDK;
+@import ZappPlugins;
 #import "Sport1HTTPClient.h"
 
 static NSString *const kLivestreamURL = @"livestream_url";
@@ -30,7 +30,7 @@ static NSString *const kLivestreamURL = @"livestream_url";
                       success:(void (^)(NSString *streamToken))success
                       failure:(void (^)(NSNumber *statusCode))failure {
     
-    NSString *userToken = [[ZPLoginManager.sharedInstance createWithUserData] getUserToken];
+    NSString *userToken = [[[ZAAppConnector sharedInstance].pluginsDelegate.loginPluginsManager createWithUserData] getUserToken];
     
     if (!userToken) {
         failure(nil);

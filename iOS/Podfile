@@ -1,5 +1,5 @@
 platform :ios, '10.0'
-source 'git@github.com:CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 source 'git@github.com:applicaster/CocoaPods-Private.git'
 source 'git@github.com:applicaster/CocoaPods.git'
 source 'git@github.com:applicaster/PluginPresenter-iOS.git'
@@ -15,20 +15,19 @@ end
 def shared_pods
     pod 'JWPlayerPlugin'
     pod 'PluginPresenter'
-	#The Submodules and pinned versions below are needed to stop issues with clashing versions. Test before removing / updating.
-    pod 'ZappPlugins', :path => 'Submodules/ZappPlugins/ZappPlugins.podspec'
-    pod 'ApplicasterSDK', :path => 'Submodules/ApplicasterSDK/ApplicasterSDK.podspec'
-    pod 'ZappAnalyticsPluginsSDK', '~> 8.0'
-    pod 'ZappLoginPluginsSDK', '~> 8.0'
-    pod 'ZappPushPluginsSDK', '~> 8.0'
-    pod 'ZappGeneralPluginsSDK', '~> 8.0'
+    pod 'ZappPlugins'
+    pod 'ApplicasterSDK'
+    pod 'ZappAnalyticsPluginsSDK'
+    pod 'ZappLoginPluginsSDK'
+    pod 'ZappPushPluginsSDK'
+    pod 'ZappGeneralPluginsSDK'
 end
 
-target 'Sport1Player' do
+target 'DIRTVisionPlayer' do
 	shared_pods
 end
 
- target 'Sport1PlayerTests' do
+ target 'DIRTVisionPlayerTests' do
     inherit! :search_paths
     shared_pods
 end

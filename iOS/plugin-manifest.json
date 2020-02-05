@@ -1,39 +1,35 @@
 {
   "api": {
     "require_startup_execution": false,
-    "class_name": "Sport1PlayerAdapter",
+    "class_name": "DIRTVisionPlayerAdapter",
     "modules": [
 
     ]
   },
   "dependency_repository_url": [
-    "https://github.com/applicaster/PluginPresenter-iOS.git"
+    "https://github.com/applicaster/PluginPresenter-iOS.git",
+    "https://github.com/applicaster/zapp-player-plugin-jw.git"
   ],
   "platform": "ios",
-  "author_name": "Oliver Stowell",
-  "author_email": "o.stowell@applicaster.co.uk",
-  "manifest_version": "1.6.0",
-  "name": "Sport1 Player",
-  "description": "Sport1 wrapper for JWPlayer",
+  "author_name": "Andrii Novoselskyi",
+  "author_email": "andrii.novoselskyi@corewillsoft.com",
+  "manifest_version": "0.1.0",
+  "name": "DIRTVision Player",
+  "description": "DIRTVision wrapper for JWPlayer",
   "type": "player",
   "screen": true,
-  "identifier": "sport1player",
+  "identifier": "DIRTVisionInplayerPlayer",
   "ui_builder_support": true,
-  "dependency_name": "Sport1Player",
-  "dependency_version": "1.6.0",
+  "dependency_name": "DIRTVisionPlayer",
+  "dependency_version": "0.1.0",
   "whitelisted_account_ids": [
-    "5d1b6753564117000de4bb60"
+    "5d779d6838d801000f347f47"
   ],
   "min_zapp_sdk": "12.1.6",
   "deprecated_since_zapp_sdk": "",
   "unsupported_since_zapp_sdk": "",
   "react_native": false,
   "custom_configuration_fields": [
-    {
-      "type": "text",
-      "key": "pin_validation_plugin_id",
-      "tooltip_text": "The identifier for the pin validation plugin to be used."
-    },
     {
         "type": "text",
         "key": "livestream_url",
