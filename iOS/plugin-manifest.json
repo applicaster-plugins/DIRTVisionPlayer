@@ -6,7 +6,10 @@
 
     ]
   },
-  "dependency_repository_url": [],
+  "dependency_repository_url": [
+    "https://github.com/applicaster/PluginPresenter-iOS.git",
+    "https://github.com/applicaster/zapp-player-plugin-jw.git"
+  ],
   "platform": "ios",
   "author_name": "Andrii Novoselskyi",
   "author_email": "andrii.novoselskyi@corewillsoft.com",

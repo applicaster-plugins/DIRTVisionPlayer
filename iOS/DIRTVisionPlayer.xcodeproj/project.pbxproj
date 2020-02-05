@@ -211,7 +211,7 @@
 				5280B5C32316A2C30095CFBF /* Sources */,
 				5280B5C42316A2C30095CFBF /* Frameworks */,
 				5280B5C52316A2C30095CFBF /* Resources */,
-				33BD577B3128BC0D6A98002F /* [CP] Copy Pods Resources */,
+				72C45954FE79E13FC4CD24CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,8 +230,8 @@
 				5280B5CC2316A2C40095CFBF /* Sources */,
 				5280B5CD2316A2C40095CFBF /* Frameworks */,
 				5280B5CE2316A2C40095CFBF /* Resources */,
-				C91FB861A1F0ED080ED7F6C3 /* [CP] Embed Pods Frameworks */,
-				74C56BE2C04558621F258618 /* [CP] Copy Pods Resources */,
+				B34D9CB04784B6B99AB65AA0 /* [CP] Embed Pods Frameworks */,
+				09689D785AA01ADDE58F1DC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5280B5C12316A2C30095CFBF /* Build configuration list for PBXProject "DirtvisionPlayer" */;
+			buildConfigurationList = 5280B5C12316A2C30095CFBF /* Build configuration list for PBXProject "DIRTVisionPlayer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -298,6 +298,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09689D785AA01ADDE58F1DC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayerTests/Pods-DIRTVisionPlayerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayerTests/Pods-DIRTVisionPlayerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayerTests/Pods-DIRTVisionPlayerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2555322937DD81065DF6FD60 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,7 +337,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		33BD577B3128BC0D6A98002F /* [CP] Copy Pods Resources */ = {
+		72C45954FE79E13FC4CD24CC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,23 +352,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayer/Pods-DIRTVisionPlayer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74C56BE2C04558621F258618 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayerTests/Pods-DIRTVisionPlayerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayerTests/Pods-DIRTVisionPlayerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DIRTVisionPlayerTests/Pods-DIRTVisionPlayerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		842FA22F7337F526EEF3F2EB /* [CP] Check Pods Manifest.lock */ = {
@@ -376,7 +376,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C91FB861A1F0ED080ED7F6C3 /* [CP] Embed Pods Frameworks */ = {
+		B34D9CB04784B6B99AB65AA0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -643,7 +643,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5280B5C12316A2C30095CFBF /* Build configuration list for PBXProject "DirtvisionPlayer" */ = {
+		5280B5C12316A2C30095CFBF /* Build configuration list for PBXProject "DIRTVisionPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5280B5D92316A2C40095CFBF /* Debug */,
