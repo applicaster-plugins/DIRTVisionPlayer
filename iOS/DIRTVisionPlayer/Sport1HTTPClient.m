@@ -6,7 +6,6 @@
 //  Copyright © 2019 Applicaster Ltd. All rights reserved.
 //
 
-@import ZappLoginPluginsSDK;
 @import ZappPlugins;
 #import "Sport1HTTPClient.h"
 
